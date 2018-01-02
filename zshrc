@@ -1,6 +1,9 @@
 # Create variables for necessary paths
 CONFIG_BASE=$HOME/sysConfig
 
+# Set the default user
+DEFAULT_USER="marco"
+
 # 
 TERM="xterm-256color"
 
@@ -21,8 +24,15 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
 # Configure Powerlevel9k theme
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status root_indicator dir_writable context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs battery time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time background_jobs battery time)
+POWERLEVEL9K_BATTERY_STAGES=(
+   $'▏    ▏' $'▎    ▏' $'▍    ▏' $'▌    ▏' $'▋    ▏' $'▊    ▏' $'▉    ▏' $'█    ▏'
+   $'█▏   ▏' $'█▎   ▏' $'█▍   ▏' $'█▌   ▏' $'█▋   ▏' $'█▊   ▏' $'█▉   ▏' $'██   ▏'
+   $'██   ▏' $'██▎  ▏' $'██▍  ▏' $'██▌  ▏' $'██▋  ▏' $'██▊  ▏' $'██▉  ▏' $'███  ▏'
+   $'███  ▏' $'███▎ ▏' $'███▍ ▏' $'███▌ ▏' $'███▋ ▏' $'███▊ ▏' $'███▉ ▏' $'████ ▏'
+   $'████ ▏' $'████▎▏' $'████▍▏' $'████▌▏' $'████▋▏' $'████▊▏' $'████▉▏' $'█████▏' )
 
 # Finish and apply Antigen
 antigen apply
