@@ -20,6 +20,9 @@ antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
+# Use nerd font for Powerlevel9k
+POWERLEVEL9K_MODE='nerdfont-complete'
+
 # Load theme
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
