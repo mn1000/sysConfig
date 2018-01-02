@@ -1,5 +1,8 @@
-# create variables for necessary paths
+# Create variables for necessary paths
 CONFIG_BASE=$HOME/sysConfig
+
+# 
+TERM="xterm-256color"
 
 # Load Antigen
 source $CONFIG_BASE/antigen/antigen.zsh
@@ -15,7 +18,11 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
 # Load theme
-antigen theme robbyrussell
+antigen theme bhilburn/powerlevel9k powerlevel9k
+
+# Configure Powerlevel9k theme
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status root_indicator dir_writable context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs battery time)
 
 # Finish and apply Antigen
 antigen apply
