@@ -139,6 +139,9 @@ setopt correctall
 # Glob also matches dotfiles with explicitly writing .
 setopt globdots
 
+# Prevent accidentally overwriting existing files
+setopt noclobber
+
 #
 # Aliases
 #
