@@ -120,6 +120,9 @@ antigen bundle djui/alias-tips
 # Toggle sudo before previous/current command
 antigen bundle sudo
 
+# Funny plugins
+antigen bundle chucknorris
+
 # Load Powerlevel9k theme
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
