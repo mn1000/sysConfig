@@ -130,6 +130,15 @@ source /etc/zsh_command_not_found
 # Automatically rehash
 zstyle ':completion:*' rehash true
 
+# Enable cd to use variables
+setopt cdablevars
+
+# Enable command and argument correction
+setopt correctall
+
+# Glob also matches dotfiles with explicitly writing .
+setopt globdots
+
 #
 # Aliases
 #
