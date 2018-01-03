@@ -127,6 +127,9 @@ antigen apply
 # Command-not-found hook to propose packages when entering unknown command
 source /etc/zsh_command_not_found
 
+# Automatically rehash
+zstyle ':completion:*' rehash true
+
 #
 # Aliases
 #
