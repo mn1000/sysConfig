@@ -8,9 +8,6 @@ CONFIG_BASE=$HOME/sysConfig
 # Set the default user
 DEFAULT_USER="marco"
 
-# 
-TERM="xterm-256color"
-
 #
 # Configure Powerlevel9k Theme
 #
@@ -103,6 +100,9 @@ source $CONFIG_BASE/antigen/antigen.zsh
 
 # Load oh-my-zsh's library
 antigen use oh-my-zsh
+
+# Check for 256color support
+antigen bundle chrissicool/zsh-256color
 
 # Bundles from default repo (robbyrussell's oh-my-zsh)
 antigen bundle git
