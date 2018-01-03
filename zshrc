@@ -8,6 +8,9 @@ CONFIG_BASE=$HOME/sysConfig
 # Set the default user
 DEFAULT_USER="marco"
 
+# Set Vim the standard editor
+EDITOR=vim
+
 #
 # Configure Powerlevel9k Theme
 #
@@ -116,6 +119,13 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 
 # Finish and apply Antigen
 antigen apply
+
+# 
+# Configure Zsh
+#
+
+# Command-not-found hook to propose packages when entering unknown command
+source /etc/zsh_command_not_found
 
 #
 # Aliases
