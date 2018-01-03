@@ -110,8 +110,10 @@ antigen bundle chrissicool/zsh-256color
 # Plugin(s) for Git, for example aliases
 antigen bundle git
 
-# Bundles from zsh-users
-antigen bundle zsh-users/zsh-syntax-highlighting
+# Syntax highlighting
+antigen bundle zdharma/fast-syntax-highlighting
+
+# Enable searching the history
 antigen bundle zsh-users/zsh-history-substring-search
 
 # Get tips for defined alias
