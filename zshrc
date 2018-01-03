@@ -107,15 +107,24 @@ antigen use oh-my-zsh
 # Check for 256color support
 antigen bundle chrissicool/zsh-256color
 
-# Bundles from default repo (robbyrussell's oh-my-zsh)
+# Plugin(s) for Git, for example aliases
 antigen bundle git
 
 # Bundles from zsh-users
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
-# Load theme
+# Get tips for defined alias
+antigen bundle djui/alias-tips
+
+# Toggle sudo before previous/current command
+antigen bundle sudo
+
+# Load Powerlevel9k theme
 antigen theme bhilburn/powerlevel9k powerlevel9k
+
+# Solarized-dark coloring for man pages
+antigen bundle zlsun/solarized-man
 
 # Finish and apply Antigen
 antigen apply
