@@ -1,12 +1,20 @@
-" be iMproved, required for Vundle
+"
+" Some General Settings
+"
+
+" Be iMproved, turn off vi compatible
 set nocompatible
-filetype off
+
+"
+" Vundle Plugin Management
+"
 
 " Set the runtime path to include Vundle and initialize
+filetype off        " required for Vundle
 set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
+" Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 " Load plugins
@@ -23,9 +31,11 @@ Plugin 'altercation/vim-colors-solarized'
 
 " End Vundle plugin loading, all plugins must be added before this line
 call vundle#end()
-filetype plugin indent on
+filetype plugin indent on   " turn back on
 
+"
 " More commands for ViM
+"
 
 " Activate the mouse
 set mouse=a
