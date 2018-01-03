@@ -1,3 +1,7 @@
+#
+# Variables
+#
+
 # Create variables for necessary paths
 CONFIG_BASE=$HOME/sysConfig
 
@@ -7,29 +11,17 @@ DEFAULT_USER="marco"
 # 
 TERM="xterm-256color"
 
+#
+# Configure Powerlevel9k Theme
+#
+
 # Set some color variables
 DEFAULT_FOREGROUND=006
 DEFAULT_BACKGROUND=237
 DEFAULT_COLOR=$DEFAULT_FOREGROUND
 
-# Load Antigen
-source $CONFIG_BASE/antigen/antigen.zsh
-
-# Load oh-my-zsh's library
-antigen use oh-my-zsh
-
-# Bundles from default repo (robbyrussell's oh-my-zsh)
-antigen bundle git
-
-# Bundles from zsh-users
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-history-substring-search
-
 # Use nerd font for Powerlevel9k
 POWERLEVEL9K_MODE='nerdfont-complete'
-
-# Load theme
-antigen theme bhilburn/powerlevel9k powerlevel9k
 
 # Set prompt content and define basic style
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status root_indicator context dir_writable dir vcs)
@@ -37,7 +29,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time background_jobs batte
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="╭"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="╰\uF460 "
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="╰\uF460\uF460\uF460"
 
 # Specify separators
 POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR="\uE0B4"
@@ -102,8 +94,32 @@ POWERLEVEL9K_TIME_FORMAT="\uF017 %T" #  15:29
 POWERLEVEL9K_TIME_FOREGROUND="$DEFAULT_FOREGROUND"
 POWERLEVEL9K_TIME_BACKGROUND="$DEFAULT_BACKGROUND"
 
+# 
+# Antigen and Plugins
+#
+
+# Load Antigen
+source $CONFIG_BASE/antigen/antigen.zsh
+
+# Load oh-my-zsh's library
+antigen use oh-my-zsh
+
+# Bundles from default repo (robbyrussell's oh-my-zsh)
+antigen bundle git
+
+# Bundles from zsh-users
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
+
+# Load theme
+antigen theme bhilburn/powerlevel9k powerlevel9k
+
 # Finish and apply Antigen
 antigen apply
+
+#
+# Aliases
+#
 
 # Useful aliases for list files and directories
 alias ll="ls -lF"
