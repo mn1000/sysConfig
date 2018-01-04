@@ -122,6 +122,9 @@ antigen bundle djui/alias-tips
 # Toggle sudo before previous/current command
 antigen bundle sudo
 
+# Useful copy command 'cpv'
+antigen bundle cp
+
 # Funny plugins
 antigen bundle chucknorris
 
