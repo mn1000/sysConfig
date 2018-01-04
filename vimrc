@@ -29,8 +29,15 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Useful finder for files, buffers, mru, etc.
 Plugin 'ctrlpvim/ctrlp.vim'
 
+" Use Airline status bar
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
+
+" Use developer icons (nerd font)
+Plugin 'ryanoasis/vim-devicons'
 
 " End Vundle plugin loading, all plugins must be added before this line
 call vundle#end()
@@ -39,6 +46,12 @@ filetype plugin indent on   " turn back on
 "
 " More commands and configuration for ViM
 "
+
+" Set encoding to UTF-8
+set encoding=utf8
+
+" Set font
+set guifont=SauceCodePro\ Nerd\ Font\ 11
 
 " Activate the mouse
 set mouse=a
@@ -66,3 +79,8 @@ syntax enable
 set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
+
+" Configure Airline status bar
+let g:airline_powerline_fonts=1
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
