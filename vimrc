@@ -26,6 +26,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
+" Useful finder for files, buffers, mru, etc.
+Plugin 'ctrlpvim/ctrlp.vim'
+
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
 
@@ -34,7 +37,7 @@ call vundle#end()
 filetype plugin indent on   " turn back on
 
 "
-" More commands for ViM
+" More commands and configuration for ViM
 "
 
 " Activate the mouse
@@ -44,6 +47,11 @@ set mouse=a
 set tabstop=4
 set expandtab
 set smartindent
+
+" Configure buffers
+set hidden                      " Activate hidden buffers
+noremap <Tab>   :bnext<CR>      " Tab for next buffer
+noremap <S-Tab> :bprevious<CR>  " Shift-Tab for previous buffer
 
 " Open NERDTree when starting without file or on directory
 autocmd StdinReadPre * let s:std_in=1
